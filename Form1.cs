@@ -2,12 +2,15 @@ namespace TicTacToe
 {
     public partial class Form1 : Form
     {
-        bool turn = true;
+        public bool turn = true;
         string playerSymbol = "X";
         string cpuSymbol = "O";
-        int turn_count = 0;
+        public int turn_count = 0;
+        public bool winner;
+
         public Form1()
         {
+            MessageBox.Show("This is a two player tic tac toe. X starts. Press New game or F2 to reset the board");
             InitializeComponent();
         }
 
@@ -31,6 +34,7 @@ namespace TicTacToe
                 turn = false;
                 b.Text = playerSymbol;
                 checkForWinner();
+                
             }
             else
             {
@@ -44,7 +48,7 @@ namespace TicTacToe
 
         }
 
-        private void checkForWinner()
+        public void checkForWinner()
         {
             bool winner = false;
             //Buttons are renamed to A1-C3 for easier visualsation of a grid
@@ -110,7 +114,10 @@ namespace TicTacToe
                     MessageBox.Show("It's a draw!");
                 }
             }
+            
         }
+
+      
         private void disableButtons()
         {
             /*Loops through all our visible components and disable the buttons so the player can't keep playing 
@@ -152,7 +159,7 @@ namespace TicTacToe
         }
 
 
-        private void button_enter(object sender, EventArgs e)
+        public void button_enter(object sender, EventArgs e)
         {
             Button b = (Button)sender;
             if (turn)
@@ -175,5 +182,6 @@ namespace TicTacToe
             }
 
         }
+
     }
 }
