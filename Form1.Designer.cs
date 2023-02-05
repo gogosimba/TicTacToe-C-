@@ -228,15 +228,15 @@
 
         #endregion
 
-        private Button A1;
-        private Button A2;
-        private Button A3;
-        private Button B1;
-        private Button B2;
-        private Button B3;
-        private Button C1;
-        private Button C2;
-        private Button C3;
+        public Button A1;
+        public Button A2;
+        public Button A3;
+        public Button B1;
+        public Button B2;
+        public Button B3;
+        public Button C1;
+        public Button C2;
+        public Button C3;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
